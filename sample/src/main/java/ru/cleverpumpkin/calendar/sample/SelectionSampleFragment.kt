@@ -117,7 +117,7 @@ class SelectionSampleFragment : Fragment() {
             initialDate = initialDate,
             selectionMode = selectionMode,
             firstDayOfWeek = Calendar.MONDAY,
-            firstDayWeekSelectionMode = Calendar.WEDNESDAY,
+            firstDayWeekSelectionMode = if (selectionMode == SelectionMode.WEEK) Calendar.WEDNESDAY else null,
             selectedDates = preselectedDates
         )
     }
